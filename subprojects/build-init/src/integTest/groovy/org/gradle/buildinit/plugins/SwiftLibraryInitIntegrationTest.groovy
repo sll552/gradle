@@ -24,7 +24,11 @@ import org.gradle.nativeplatform.fixtures.AvailableToolChains.InstalledToolChain
 import org.gradle.nativeplatform.fixtures.RequiresInstalledToolChain
 import org.gradle.nativeplatform.fixtures.SharedLibraryFixture
 import org.gradle.nativeplatform.fixtures.ToolChainRequirement
+import org.gradle.util.Requires
 
+import static org.gradle.util.TestPrecondition.NOT_MAC_OS_X_M1
+
+@Requires(NOT_MAC_OS_X_M1)
 @RequiresInstalledToolChain(ToolChainRequirement.SWIFTC)
 class SwiftLibraryInitIntegrationTest extends AbstractInitIntegrationSpec {
 

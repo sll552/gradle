@@ -19,6 +19,8 @@ package org.gradle.ide.visualstudio.fixtures
 import org.gradle.ide.fixtures.IdeCommandLineUtil
 import org.gradle.internal.os.OperatingSystem
 import org.gradle.nativeplatform.fixtures.AbstractInstalledToolChainIntegrationSpec
+import org.gradle.util.Requires
+import org.gradle.util.TestPrecondition
 
 abstract class AbstractVisualStudioIntegrationSpec extends AbstractInstalledToolChainIntegrationSpec {
     final def projectConfigurations = ['debug', 'release'] as Set
